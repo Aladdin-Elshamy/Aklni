@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Aklni Diner</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Aklni Diner</h1>
+            <span class="sub-heading">The best burgers and pizzas in town.</span>
+        </div>
+    </header>
+    <main>
+        <div class="container" id="menu">
+
+        </div>
+        <div class="container">
+            <div class='confirm-order-container'>
+                <section class='confirm-order' id='confirm-order'>
+                    <h4 class='order-title'>
+                        Your order
+                    </h4>
+                    <div class="order" id="order">
+
+                    </div>
+
+                    <div class="total-cost flex" id="total-cost">
+
+                    </div>
+                    <button class="complete-order btn" id="complete-order">Complete order</button>
+                </section>
+            </div>
+        </div>
+    </main>
+    <div class="container">
+        <div class="payment-modal" id="payment-modal">
+            <div class="before-complete flex-column" id="before-complete">
+                <button class="payment-modal-close-btn" >X</button>
+                <div class="payment-modal-form">
+                    <h3 class="payment-modal-form-title" id="payment-modal-form-title">Enter card details</h3>
+                    <div class="payment-modal-form-inputs" id="payment-modal-form-inputs">
+                        <form action="" id="form">
+                            <input type="text" name="username" id="username" placeholder="Enter your name"
+                            aria-label="Enter your name" required>
+                            <input type="text" name="card-number" placeholder="Enter your card number"
+                            aria-label="Enter your card number" id="card-number"
+                            required minlength="15" maxlength="16" title="Please enter a valid card number" oninvalid="this.setCustomValidity('Please enter a valid card number')" oninput="this.setCustomValidity('')" pattern="^\d+$">
+                            <input type="number" name="cvv" id="cvv" placeholder="Enter CVV" min="100" max="999"
+                            aria-label="Enter CVV" required
+                            title="Please enter a valid CVV" oninvalid="this.setCustomValidity('Please enter a valid CVV')" oninput="this.setCustomValidity('')">
+                            <button id="submit-btn" class="submit-btn btn">Pay</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="during-complete flex-column hidden" id="during-complete">
+                <button class="payment-modal-close-btn" >X</button>
+                <h3 class="payment-modal-form-title" id="payment-modal-form-title">Please wait! your order is on the way.</h3>
+                <img src='images/bouncing-circles.svg' class='svg'>
+            </div>
+            <div class="after-complete flex-column hidden" id="after-complete">
+                <button class="payment-modal-close-btn" >X</button>
+                <h3 class="payment-modal-form-title" id="payment-modal-form-title">Payment succeeded, Enjoy your meal!</h3>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+
+</body>
+
+</html>
