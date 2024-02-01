@@ -37,6 +37,7 @@ closeBtns.forEach((btn,index) => {
         }
         document.querySelector("header").classList.remove("blur");
         document.querySelector("main").classList.remove("blur")
+        document.forms[0].reset()
     })
     
     
@@ -72,7 +73,8 @@ document.forms[0].addEventListener("submit",function(e){
             document.getElementById('confirm-order').classList.add('hidden')
             document.querySelector("header").classList.remove("blur");
             document.querySelector("main").classList.remove("blur")
-        },6000)
+            document.forms[0].reset()
+        },4500)
     }
 })
 function removeFromCard(itemID){
