@@ -4,7 +4,6 @@ const order = document.getElementById("order");
 const totalCost = document.getElementById('total-cost');
 const completeBtn = document.getElementById('complete-order');
 const closeBtns = document.querySelectorAll(".payment-modal-close-btn");
-const modal = document.getElementById("payment-modal");
 let listItems = [];
 if(listItems.length<=0){
     document.getElementById('confirm-order').classList.add('hidden')
