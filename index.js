@@ -4,6 +4,7 @@ const order = document.getElementById("order");
 const totalCost = document.getElementById('total-cost');
 const completeBtn = document.getElementById('complete-order');
 const closeBtns = document.querySelectorAll(".payment-modal-close-btn");
+let closeInterval;
 let listItems = [];
 if(listItems.length<=0){
     document.getElementById('confirm-order').classList.add('hidden')
@@ -35,8 +36,12 @@ closeBtns.forEach((btn,index) => {
             document.getElementById('confirm-order').classList.add('hidden')
         }
         document.querySelector("header").classList.remove("blur");
-        document.querySelector("main").classList.remove("blur")
-        document.forms[0].reset()
+        document.querySelector("main").classList.remove("blur");
+        document.getElementById("during-complete").classList.add("hidden");
+        document.getElementById("after-complete").classList.add("hidden");
+        document.getElementById("before-complete").classList.remove("hidden");
+        clearInterval(closeInterval);
+        document.forms[0].reset();
     })
     
     
@@ -62,7 +67,7 @@ document.forms[0].addEventListener("submit",function(e){
             document.getElementById("during-complete").classList.add("hidden");
             document.getElementById("after-complete").classList.remove("hidden");
         },3000)
-        setTimeout(function(){
+        closeInterval = setTimeout(function(){
             document.getElementById("during-complete").classList.add("hidden");
             document.getElementById("after-complete").classList.add("hidden");
             document.getElementById("before-complete").classList.remove("hidden");
@@ -73,7 +78,7 @@ document.forms[0].addEventListener("submit",function(e){
             document.querySelector("header").classList.remove("blur");
             document.querySelector("main").classList.remove("blur")
             document.forms[0].reset()
-        },4500)
+        },5000)
     }
 })
 function removeFromCard(itemID){
