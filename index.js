@@ -24,6 +24,8 @@ order.addEventListener("click",function(e){
 })
 completeBtn.addEventListener("click",function(){
     document.getElementById('payment-modal').style.display = 'flex';
+    document.querySelector("header").classList.add("blur");
+    document.querySelector("main").classList.add("blur")
 })
 closeBtns.forEach((btn,index) => {
     btn.addEventListener("click",function(){
@@ -33,12 +35,16 @@ closeBtns.forEach((btn,index) => {
             renderOrder();
             document.getElementById('confirm-order').classList.add('hidden')
         }
+        document.querySelector("header").classList.remove("blur");
+        document.querySelector("main").classList.remove("blur")
     })
+    
     
     
 })
     
 document.forms[0].addEventListener("submit",function(e){
+    
     let checkInputs = 0;
     document.querySelectorAll("input").forEach(input => {
         if(input.value == '')
@@ -64,6 +70,8 @@ document.forms[0].addEventListener("submit",function(e){
             listItems = [];
             renderOrder();
             document.getElementById('confirm-order').classList.add('hidden')
+            document.querySelector("header").classList.remove("blur");
+            document.querySelector("main").classList.remove("blur")
         },6000)
     }
 })

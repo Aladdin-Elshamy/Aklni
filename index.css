@@ -271,3 +271,7 @@ form{
 .hidden{
     display: none;
 }
+.blur{
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
