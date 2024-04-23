@@ -1,5 +1,5 @@
 # Aklni Website
-![image](https://github.com/Aladdin-Elshamy/Aklni/assets/122921299/4c17a32e-e0f9-4a69-8c34-5703101574c0)
+![image](https://github.com/Aladdin-Elshamy/Aklni/assets/122921299/4c457e06-66ff-45cd-9781-c847c331fd49)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
