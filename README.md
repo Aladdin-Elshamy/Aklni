@@ -1,4 +1,4 @@
-# Aklni Website
+# Aklni Diner
 ![image](https://github.com/Aladdin-Elshamy/Aklni/assets/122921299/4f7527e1-8e7a-4107-adb5-9315d1cf196e)
 - [Features](#features)
 - [Getting Started](#getting-started)
